@@ -1,6 +1,21 @@
-## Deploy Azure resources from console
+## Prerequisites
+These actions have to be done in your machine where Terraform scripts will be performed
 
-Firstly, login to the Azure CLI using:
+1. Install Azure CLI
+2. Install Terraform 
+
+## Deploy Azure resources from console with Azure CLI and Terraform
+
+Download script's directory from the github"
+https://github.com/stenastena/SL 
+and unzip it in a target directory.
+
+Go to the target directory.
+```
+$ cd your_target_directory
+```
+
+Login to the Azure CLI using:
 
 ``` 
 $ az login 
@@ -30,3 +45,10 @@ The output (similar to below) will display one or more Subscriptions - with the 
   }
 ]
 ```
+Should you have more than one Subscription, you can specify the Subscription to use via the following command:
+
+```
+$ az account set --subscription="SUBSCRIPTION_ID"
+```
+
+
