@@ -52,13 +52,13 @@ Should you have more than one Subscription, you can specify the Subscription to 
 ```
 $ az account set --subscription="SUBSCRIPTION_ID"
 ```
-### Part 2. Configure your future resource group and properties of storage account
+## Part 2. Configure your future resource group and properties of storage account
 *Change your configuration parts in the file variables.tf*
 * Prefix for all your future components. It also will be used in resource group name.
 * Location of Azure datacenter
 * Tags 
 
-## Part 3. Perform Terraform script
+## Part 3. Perform Terraform script 
 
 Run Terraform and after checking apply with "yes"
 ```
