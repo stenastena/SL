@@ -88,9 +88,14 @@ These values map to the Terraform variables like so:
 
 ## Part 3. Perform Terraform script
 
-Perform Terraform script
+Run Terraform script
 ```
 $ terraform apply -auto-approve -var="client_secret=XXXXXXXXXXXXXXXXXXXX"
 ```
 
+## Part 4. Delete resources
+Run Terraform script necessarily from the folder from which the resources were deployed 
+```
+$ terraform destroy
+```
 

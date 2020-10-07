@@ -16,7 +16,7 @@ Go to the target directory.
 ```
 $ cd your_target_directory/storage1
 ```
-
+## Part 1. Connect to Azure
 Login to the Azure CLI using:
 
 ``` 
@@ -52,14 +52,15 @@ Should you have more than one Subscription, you can specify the Subscription to 
 ```
 $ az account set --subscription="SUBSCRIPTION_ID"
 ```
-
+### Part 2. Configure your future resource group and properties of storage account
 *Change your configuration parts in the file variables.tf*
 * Prefix for all your future components. It also will be used in resource group name.
 * Location of Azure datacenter
 * Tags 
 
+## Part 3. Perform Terraform script
 
-Perform Terraform and after checking apply with "yes"
+Run Terraform and after checking apply with "yes"
 ```
 $ terraform apply
 ```
@@ -67,4 +68,8 @@ Also you can perform Terraform with automatic enforcement
 ```
 $ terraform apply -auto-approve
 ```
-
+## Delete resources
+Run Terraform script necessarily from the folder from which the resources were deployed 
+```
+$ terraform destroy
+```
