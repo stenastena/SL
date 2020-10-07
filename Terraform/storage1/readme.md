@@ -14,7 +14,7 @@ and unzip it in a target directory.
 
 Go to the target directory.
 ```
-$ cd your_target_directory
+$ cd your_target_directory/Terraform/storage1
 ```
 
 Login to the Azure CLI using:
