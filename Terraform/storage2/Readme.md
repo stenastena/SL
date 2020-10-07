@@ -1,4 +1,4 @@
-# Blob storage with blob example
+# Blob storage with blob example (this option is better for automatic executing)
 
 ## Prerequisites
 These actions have to be done in your machine where Terraform scripts will be performed
