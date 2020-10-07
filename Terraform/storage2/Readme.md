@@ -16,7 +16,7 @@ Go to the target directory.
 ```
 $ cd your_target_directory/Storage2
 ```
-## Part 1 Configure Azure service principal (it will be done onle once)
+## Part 1. Configure Azure service principal (it will be done only once)
 Login to the Azure CLI using:
 
 ``` 
@@ -78,17 +78,15 @@ These values map to the Terraform variables like so:
 
 *Write down `client_secret` in secure place and use it further in command line when you will execute Terraform script*  
 
-### Part 2 Configurate your future resource group and properties of storage account
-*Change your basic configuration parts in the file variables.tf*
-* Prefix for all your future components
+### Part 2. Configurate your future resource group and properties of storage account
+*Change your basic configuration parts in the file `variables.tf`*
+* Prefix for all your future components. It also will be used in resource group name.
 * Location of Azure datacenter
 * Tags 
 
-*Change or add storage properties in block resource "azurerm_storage_account".*
+*Change or add storage properties in block resource "azurerm_storage_account" with  using this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
 
-*with  using this reference https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html*
-
-## Part 3 Perform Terraform script
+## Part 3. Perform Terraform script
 
 Perform Terraform script
 ```
