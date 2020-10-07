@@ -1,10 +1,12 @@
-# Prerequisites
+# Blob storage with blob example
+
+## Prerequisites
 These actions have to be done in your machine where Terraform scripts will be performed
 
 1. Install Azure CLI
 2. Install Terraform 
 
-# Deploy Azure resources from console with Azure CLI and Terraform
+## Deploy Azure resources from console with Azure CLI and Terraform
 
 Download script's directory from the github"
 https://github.com/stenastena/SL 

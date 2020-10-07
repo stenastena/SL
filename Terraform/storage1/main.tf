@@ -17,12 +17,7 @@ resource "azurerm_storage_account" "example" {
   account_replication_type = "LRS"
   allow_blob_public_access = "true"
   tags                     = var.tags
-  /*
-  network_rules {
-    default_action = "Deny"
-    ip_rules       = ["23.45.1.0/30"]
-  }
-  */
+  
 }
 
 resource "azurerm_storage_container" "example" {
