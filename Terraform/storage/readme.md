@@ -1,10 +1,10 @@
-## Prerequisites
+# Prerequisites
 These actions have to be done in your machine where Terraform scripts will be performed
 
 1. Install Azure CLI
 2. Install Terraform 
 
-## Deploy Azure resources from console with Azure CLI and Terraform
+# Deploy Azure resources from console with Azure CLI and Terraform
 
 Download script's directory from the github"
 https://github.com/stenastena/SL 
@@ -51,4 +51,18 @@ Should you have more than one Subscription, you can specify the Subscription to 
 $ az account set --subscription="SUBSCRIPTION_ID"
 ```
 
+*Change your configuration parts in the file variables.tf*
+* Prefix for all your future components
+* Location of Azure datacenter
+* Tags 
+
+
+Perform Terraform and after checking apply with "yes"
+```
+$ terraform apply
+```
+Also you can perform Terraform with automatic enforcement
+```
+$ terraform apply -auto-approve
+```
 
