@@ -54,7 +54,7 @@ $ az account set --subscription="SUBSCRIPTION_ID"
 ```
 
 *Change your configuration parts in the file variables.tf*
-* Prefix for all your future components
+* Prefix for all your future components. It also will be used in resource group name.
 * Location of Azure datacenter
 * Tags 
 
