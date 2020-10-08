@@ -96,6 +96,6 @@ $ terraform apply -auto-approve -var="client_secret=XXXXXXXXXXXXXXXXXXXX"
 ## Part 4. Delete resources
 It is mandatory to run the Terraform script from the folder from which the resources were deployed.
 ```
-$ terraform destroy
+$ terraform destroy -auto-approve -var="client_secret=XXXXXXXXXXXXXXXXXXXX"
 ```
 
