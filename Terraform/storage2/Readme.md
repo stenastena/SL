@@ -88,7 +88,7 @@ These values map to the Terraform variables like so:
 
 ## Part 3. Perform Terraform script
 
-Run Terraform script
+Paste the real client secret that you saved earlier into command line instead XXXXXXXXXXXXXXXXXXXX and run Terraform script. 
 ```
 $ terraform apply -auto-approve -var="client_secret=XXXXXXXXXXXXXXXXXXXX"
 ```
