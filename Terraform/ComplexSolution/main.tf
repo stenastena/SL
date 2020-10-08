@@ -29,7 +29,4 @@ module "azure_sql_db" {
   prefix          = var.prefix
 }
 
-output "Azur_resource_group_name" {
-  value           = azurerm_resource_group.rg.name
-  description     = "The name of Resource Group"
-}
+
