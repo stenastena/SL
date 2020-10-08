@@ -1,4 +1,8 @@
-# Deployment of Azure blob storage using service principal and without sample object. This option is better for automatic executing.
+# Deployment of Azure resources using service principal.
+These Azure services will be deployed:
+* Azure storage account for blob storage
+* Azure SQL Database (not ready)
+* Azure Container Instance (not ready)
 
 ## Prerequisites
 These actions have to be done in your machine where Terraform scripts will be performed
