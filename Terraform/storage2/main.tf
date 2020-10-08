@@ -21,5 +21,4 @@ resource "azurerm_storage_account" "sta" {
   account_replication_type = "LRS"
   allow_blob_public_access = "true"
   tags                     = var.tags
-  
 }

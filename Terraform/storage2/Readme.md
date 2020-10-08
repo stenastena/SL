@@ -1,4 +1,4 @@
-# Blob storage without sample object (this option is better for automatic executing)
+# Deployment of Azure blob storage using service principal and without sample object. This option is better for automatic executing.
 
 ## Prerequisites
 These actions have to be done in your machine where Terraform scripts will be performed
