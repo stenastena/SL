@@ -1,7 +1,3 @@
-module "storage" {
-  source = "./storage"
-}
-
 provider "azurerm" {
   features {}
   version = "2.30.0"
@@ -17,8 +13,15 @@ resource "azurerm_resource_group" "rg" {
   tags                     = var.tags
 }
 
+module "storage" {
+source 	= "./modules/storage"
+rg_name	= azurerm_resource_group.rg.name
+location	= var.location
+tags      = var.tags
+prefix    = var.prefix
+}
 
-output "Resource_group_name" {
+output "Azur_resource_group_name" {
   value                 = azurerm_resource_group.rg.name
   description           = "The name of Resource Group."
 }
