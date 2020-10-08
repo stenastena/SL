@@ -29,7 +29,7 @@ Once logged in - it's possible to list the Subscriptions associated with the acc
 $ az account list
 ```
 
-The output (similar to below) will display one or more Subscriptions - with the id field being the subscription_id field referenced above.
+The output (similar to below) will display one or more Subscriptions - with the id field being the subscription_id.
 
 ```
 [
@@ -94,7 +94,7 @@ $ terraform apply -auto-approve -var="client_secret=XXXXXXXXXXXXXXXXXXXX"
 ```
 
 ## Part 4. Delete resources
-Run Terraform script necessarily from the folder from which the resources were deployed 
+It is mandatory to run the Terraform script from the folder from which the resources were deployed.
 ```
 $ terraform destroy
 ```

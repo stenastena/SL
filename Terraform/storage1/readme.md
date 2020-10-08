@@ -69,7 +69,7 @@ Also you can perform Terraform with automatic enforcement
 $ terraform apply -auto-approve
 ```
 ## Delete resources
-Run Terraform script necessarily from the folder from which the resources were deployed 
+It is mandatory to run the Terraform script from the folder from which the resources were deployed. 
 ```
 $ terraform destroy
 ```
