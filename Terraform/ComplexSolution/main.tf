@@ -8,20 +8,28 @@ provider "azurerm" {
 } 
 
 resource "azurerm_resource_group" "rg" {
-  name                     = "rg${var.prefix}"
-  location                 = var.location
-  tags                     = var.tags
+  name            = "rg${var.prefix}"
+  location        = var.location
+  tags            = var.tags
 }
 
 module "storage" {
-source 	= "./modules/storage"
-rg_name	= azurerm_resource_group.rg.name
-location	= var.location
-tags      = var.tags
-prefix    = var.prefix
+  source 	        = "./modules/storage"
+  rg_name	        = azurerm_resource_group.rg.name
+  location	      = var.location
+  tags            = var.tags
+  prefix          = var.prefix
+}
+
+module "azure_sql_db" {
+  source 	        = "./modules/sqldb"
+  rg_name	        = azurerm_resource_group.rg.name
+  location	      = var.location
+  tags            = var.tags
+  prefix          = var.prefix
 }
 
 output "Azur_resource_group_name" {
-  value                 = azurerm_resource_group.rg.name
-  description           = "The name of Resource Group."
+  value           = azurerm_resource_group.rg.name
+  description     = "The name of Resource Group"
 }

@@ -1,4 +1,4 @@
-# Deployment of Azure resources using service principal.
+# Deployment of Azure resources using Terraform and Azure service principal.
 These Azure services will be deployed:
 * Azure storage account for blob storage
 * Azure SQL Database (not ready)
