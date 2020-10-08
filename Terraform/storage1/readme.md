@@ -59,7 +59,10 @@ $ az account set --subscription="SUBSCRIPTION_ID"
 * Tags 
 
 ## Part 3. Perform Terraform script 
-
+Initialize Terraform only once.
+```
+$ terraform init
+```
 Run Terraform and after checking apply with "yes"
 ```
 $ terraform apply
