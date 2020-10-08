@@ -8,7 +8,27 @@ output "sql_server_fqdn" {
   description           = ""
 }
 
-output "sql_server_fqdn" {
+output "azure_sql_db" {
   value                 = module.azure_sql_db.database_name
+  description           = ""
+}
+
+output "sql_server_administrator_login" {
+  value                 = module.azure_sql_db.sql_server_administrator_login
+  description           = ""
+}
+
+output "sql_server_administrator_login_password" {
+  value                 = module.azure_sql_db.sql_server_administrator_login_password
+  description           = ""
+}
+
+output "storage_account_id" {
+  value                 = module.storage.storage_account_id
+  description           = ""
+}
+
+output "storage_account_primary_blob_endpoint" {
+  value                 = module.storage.storage_account_primary_blob_endpoint
   description           = ""
 }
