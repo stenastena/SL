@@ -1,7 +1,7 @@
 # Deployment of Azure resources using Terraform and Azure service principal.
 These Azure services will be deployed:
 * Azure storage account for blob storage
-* Azure SQL Database (not ready)
+* Azure SQL Database
 * Azure Container Instance (not ready)
 
 ## Prerequisites
@@ -88,8 +88,8 @@ These values map to the Terraform variables like so:
 * Location of Azure datacenter
 * Tags 
 
-*Change or add storage properties in block resource "azurerm_storage_account" with  using this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
-
+*Change or add storage properties in module "storage" in block resource "azurerm_storage_account" with this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
+*Change or add Azure SQL Database in module "azure_sql_db" in block resource "azurerm_sql_database" properties with this reference https://www.terraform.io/docs/providers/azurerm/r/sql_database.html*
 ## Part 3. Perform Terraform script
 
 Paste the real client secret that you saved earlier into command line instead XXXXXXXXXXXXXXXXXXXX and run Terraform script. 
