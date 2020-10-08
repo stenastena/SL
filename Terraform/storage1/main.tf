@@ -35,3 +35,8 @@ resource "azurerm_storage_blob" "example" {
   source                 = "SampleImageJMiro.jpg"
   
 }
+
+output "Resource_group_name" {
+  value                 = azurerm_resource_group.example.name
+  description           = "The name of Resource Group."
+}

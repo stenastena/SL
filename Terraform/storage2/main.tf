@@ -22,3 +22,8 @@ resource "azurerm_storage_account" "sta" {
   allow_blob_public_access = "true"
   tags                     = var.tags
 }
+
+output "Resource_group_name" {
+  value                 = azurerm_resource_group.rg.name
+  description           = "The name of Resource Group."
+}
