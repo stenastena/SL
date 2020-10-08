@@ -28,10 +28,10 @@ resource "azurerm_storage_container" "example" {
 }
 
 resource "azurerm_storage_blob" "example" {
-  name                   = "WilliamCopley_Imaginary_Flag_for_USA-2000x1834.jpg"
+  name                   = "WilliamCopley_Imaginary_Flag.jpg"
   storage_account_name   = azurerm_storage_account.example.name
   storage_container_name = azurerm_storage_container.example.name
   type                   = "Block"
-  source                 = "WilliamCopley_Imaginary_Flag_for_USA-2000x1834.jpg"
+  source                 = "WilliamCopley_Imaginary_Flag.jpg"
   
 }
