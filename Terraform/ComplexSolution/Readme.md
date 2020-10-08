@@ -18,7 +18,7 @@ and unzip it in a target directory.
 
 Go to the target directory.
 ```
-$ cd your_target_directory/Storage2
+$ cd your_target_directory/ComplexSolution
 ```
 ## Part 1. Configure Azure service principal (it will be done only once)
 Login to the Azure CLI using:
