@@ -2,7 +2,7 @@
 These Azure services will be deployed:
 * Azure storage account for blob storage
 * Azure SQL Database
-* Azure Container Instance (not ready)
+* Azure Container Instance (with test containter)
 
 ## Prerequisites
 These actions have to be done in your machine where Terraform scripts will be performed
@@ -88,9 +88,11 @@ These values map to the Terraform variables like so:
 * Location of Azure datacenter
 * Tags 
 
-*Change or add storage properties in module "storage" in block resource "azurerm_storage_account" with this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
+1) *Change or add storage properties in module "storage" in block resource "azurerm_storage_account" according this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
+2) *Change or add Azure SQL Database properties in module "azure_sql_db" in block resource "azurerm_sql_database" according this reference https://www.terraform.io/docs/providers/azurerm/r/sql_database.html*
+3) *Change or add Azure Container Instaces properties in module "containerinstance" in block resource "azurerm_container_group" according this reference https://www.terraform.io/docs/providers/azurerm/r/container_group.html  
+The "azurerm_container_group" module includes the deployment of a test container. Please correct the part of container deployment according your needs.*
 
-*Change or add Azure SQL Database properties in module "azure_sql_db" in block resource "azurerm_sql_database" with this reference https://www.terraform.io/docs/providers/azurerm/r/sql_database.html*
 ## Part 3. Perform Terraform script
 
 Paste the real client secret that you saved earlier into command line instead XXXXXXXXXXXXXXXXXXXX and run Terraform script. 

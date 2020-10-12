@@ -8,21 +8,14 @@ resource "azurerm_container_group" "aci" {
   
 
   container {
-    name   = "hw"
-    image  = "microsoft/aci-helloworld:latest"
-    cpu    = "0.5"
+    name   = "nginx"
+    image  = "nginx:latest"
+    cpu    = "1"
     memory = "1.5"
     ports {
       port     = 80
       protocol = "TCP"
     }
-  }
-
-  container {
-    name   = "sidecar"
-    image  = "microsoft/aci-tutorial-sidecar"
-    cpu    = "0.5"
-    memory = "1.5"
   }
 
   tags = var.tags
