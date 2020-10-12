@@ -32,3 +32,11 @@ output "storage_account_primary_blob_endpoint" {
   value                 = module.storage.storage_account_primary_blob_endpoint
   description           = ""
 }
+
+output "aci-ip_address" {
+  value = module.containerinstance.aci-ip_address
+}
+
+output "aci-fqdn" {
+  value = module.containerinstance.aci-fqdn
+}

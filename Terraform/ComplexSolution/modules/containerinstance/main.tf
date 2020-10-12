@@ -1,4 +1,4 @@
-resource "azurerm_container_group" "aci-example" {
+resource "azurerm_container_group" "aci" {
   name                     = "${var.prefix}-container-group"
   resource_group_name      = var.rg_name
   location                 = var.location
@@ -12,7 +12,10 @@ resource "azurerm_container_group" "aci-example" {
     image  = "microsoft/aci-helloworld:latest"
     cpu    = "0.5"
     memory = "1.5"
-    port   = "80"
+    ports {
+      port     = 80
+      protocol = "TCP"
+    }
   }
 
   container {
