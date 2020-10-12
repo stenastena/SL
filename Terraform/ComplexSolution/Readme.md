@@ -91,7 +91,20 @@ These values map to the Terraform variables like so:
 1) *Change or add storage properties in module "storage" in block resource "azurerm_storage_account" according this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
 2) *Change or add Azure SQL Database properties in module "azure_sql_db" in block resource "azurerm_sql_database" according this reference https://www.terraform.io/docs/providers/azurerm/r/sql_database.html*
 3) *Change or add Azure Container Instaces properties in module "containerinstance" in block resource "azurerm_container_group" according this reference https://www.terraform.io/docs/providers/azurerm/r/container_group.html  
-The "azurerm_container_group" module includes the deployment of a test container. Please correct the part of container deployment according your needs.*
+The "azurerm_container_group" module includes the deployment of a test container:*
+```
+container {
+    name   = "nginx"
+    image  = "nginx:latest"
+    cpu    = "1"
+    memory = "1.5"
+    ports {
+      port     = 80
+      protocol = "TCP"
+    }
+  }
+```
+ *Please correct the part of container deployment in file  ```../Terraform/ComplexSolution/modules/containerinstance/main.tf``` according your needs.*
 
 ## Part 3. Perform Terraform script
 
