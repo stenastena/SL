@@ -29,4 +29,10 @@ module "azure_sql_db" {
   prefix          = var.prefix
 }
 
-
+module "containerinstance" {
+  source = "./modules/containerinstance"
+  rg_name	        = azurerm_resource_group.rg.name
+  location	      = var.location
+  tags            = var.tags
+  prefix          = var.prefix
+}
