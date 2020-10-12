@@ -82,7 +82,7 @@ These values map to the Terraform variables like so:
 
 *Write down `client_secret` in secure place and use it further in command line when you will execute Terraform script*  
 
-### Part 2. Configure your future resource group and properties of storage account
+### Part 2. Configure your future resource group and properties of Azure service
 *Change your basic configuration parts in the file `variables.tf`*
 * Prefix for all your future components. It also will be used in resource group name.
 * Location of Azure datacenter
