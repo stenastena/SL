@@ -5,22 +5,22 @@ output "Resource_group_name" {
 
 
 output "sql_server_fqdn" {
-  value                 = module.azure_sql_db.sql_server_fqdn
+  value                 = module.sqldb-network.sql_server_fqdn
   description           = ""
 }
 
-output "azure_sql_db" {
-  value                 = module.azure_sql_db.database_name
+output "azure_sql-db" {
+  value                 = module.sqldb-network.database_name
   description           = ""
 }
 
 output "sql_server_administrator_login" {
-  value                 = module.azure_sql_db.sql_server_administrator_login
+  value                 = module.sqldb-network.sql_server_administrator_login
   description           = ""
 }
 
 output "sql_server_administrator_login_password" {
-  value                 = module.azure_sql_db.sql_server_administrator_login_password
+  value                 = module.sqldb-network.sql_server_administrator_login_password
   description           = ""
 }
 
@@ -45,26 +45,29 @@ output "aci-fqdn" {
 }
 */
 
+
 output "vnet-name" {
-  value = module.network.vnet-name
+  value = module.sqldb-network.vnet-name
 }
 
 output "vnet_address_space" {
-  value = module.network.vnet_address_space
+  value = module.sqldb-network.vnet_address_space
 }
 
 output "subnet1" {
-  value = module.network.subnet1
+  value = module.sqldb-network.subnet1
 }
 
 output "subnet1_address_prefixes" {
-  value = module.network.subnet1_address_prefixes
+  value = module.sqldb-network.subnet1_address_prefixes
 }
 
+/*
 output "subnet2" {
-  value = module.network.subnet2
+  value = module.sqldb-network.subnet2
 }
 
 output "subnet2_address_prefixes" {
-  value = module.network.subnet2_address_prefixes
+  value = module.sqldb-network.subnet2_address_prefixes
 }
+*/

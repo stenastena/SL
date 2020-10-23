@@ -23,8 +23,8 @@ module "storage" {
 */
 
 
-module "azure_sql_db" {
-  source 	        = "./modules/sqldb"
+module "sqldb-network" {
+  source 	        = "./modules/sqldb-network"
   rg_name	        = azurerm_resource_group.rg.name
   location	      = var.location
   tags            = var.tags
@@ -41,10 +41,13 @@ module "containerinstance" {
   prefix          = var.prefix
 }
 */
-module "network" {
-  source 	        = "./modules/network"
+
+/*
+module "vm-win-main" {
+  source          = "./modules/vm-win"
   rg_name	        = azurerm_resource_group.rg.name
   location	      = var.location
   tags            = var.tags
   prefix          = var.prefix
 }
+*/
