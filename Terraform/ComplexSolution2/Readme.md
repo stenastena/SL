@@ -1,7 +1,9 @@
 # Deployment of Azure resources using Terraform and Azure service principal.
 These Azure services will be deployed:
 * Azure storage account for blob storage
-* Azure SQL Database
+* Azure SQL Database with internal firewall rules
+* Azure virtual network with private endpoint to Azure SQL DB
+* Azure private DNS zone with private network link end record for private endpoint  
 * Azure Container Instance (with test containter)
 
 ## Prerequisites
@@ -85,8 +87,9 @@ These values map to the Terraform variables like so:
 ### Part 2. Configure your future resource group and properties of Azure service
 *Change your basic configuration parts in the file `variables.tf`*
 * Prefix for all your future components. It also will be used in resource group name.
-* Location of Azure datacenter
-* Tags 
+* Location of Azure datacenter (`not all Azure datacenters allow to create the correct Azure SQL Database`)
+* Tags
+* IP addresses that have to be permited to access to Azure SQL DB 
 
 1) *Change or add storage properties in module "storage" in block resource "azurerm_storage_account" according this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
 2) *Change or add Azure SQL Database properties in module "azure_sql_db" in block resource "azurerm_sql_database" according this reference https://www.terraform.io/docs/providers/azurerm/r/sql_database.html*

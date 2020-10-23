@@ -1,17 +1,7 @@
 resource "random_password" "password" {
   length = 16
   special = true
-#  override_special = "_%@"
 }
-
-
-/*
-resource "random_string" "password" {
-  length = 16
-  special = true
-# override_special = "/@£$"
-}
-*/
 
 resource "azurerm_sql_server" "sql_server" {
   name                         = "${var.prefix}-sqlsvr"
@@ -113,17 +103,6 @@ resource "azurerm_subnet" "subnet1" {
   enforce_private_link_endpoint_network_policies = true
 }
 
-/*
-resource "azurerm_subnet" "subnet2" {
-  name                 = "subnet2"
-  resource_group_name  = var.rg_name
-  virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.2.0/24"]
-
-  enforce_private_link_endpoint_network_policies = true
-}
-*/
-
 #Private DNS zone and obligatary virtual network link between this zone and target network
 resource "azurerm_private_dns_zone" "priv_zone" {
   name                = "privatelink.database.windows.net"
@@ -144,6 +123,7 @@ resource "azurerm_private_endpoint" "peMSSQL" {
   resource_group_name = var.rg_name
   location            = var.location
   subnet_id           = azurerm_subnet.subnet1.id
+  tags                = var.tags
 
   private_service_connection {
     name                           = "${var.prefix}-MSSQL-connection"

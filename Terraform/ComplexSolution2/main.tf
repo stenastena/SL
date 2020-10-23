@@ -12,7 +12,8 @@ resource "azurerm_resource_group" "rg" {
   location        = var.location
   tags            = var.tags
 }
-/*
+
+
 module "storage" {
   source 	        = "./modules/storage"
   rg_name	        = azurerm_resource_group.rg.name
@@ -20,8 +21,6 @@ module "storage" {
   tags            = var.tags
   prefix          = var.prefix
 }
-*/
-
 
 module "sqldb-network" {
   source 	        = "./modules/sqldb-network"
@@ -38,8 +37,6 @@ module "sqldb-network" {
   DB_firewall_IP7 = var.DB_firewall_IP7
 }
 
-
-/*
 module "containerinstance" {
   source = "./modules/containerinstance"
   rg_name	        = azurerm_resource_group.rg.name
@@ -47,4 +44,4 @@ module "containerinstance" {
   tags            = var.tags
   prefix          = var.prefix
 }
-*/
+
