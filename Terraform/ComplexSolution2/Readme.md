@@ -89,7 +89,8 @@ These values map to the Terraform variables like so:
 * Prefix for all your future components. It also will be used in resource group name.
 * Location of Azure datacenter (`not all Azure datacenters allow to create the correct Azure SQL Database`)
 * Tags
-* IP addresses that have to be permited to access to Azure SQL DB 
+* IP addresses that have to be permited to access to Azure SQL DB
+* Virtual network address space and subnet address space 
 
 1) *Change or add storage properties in module "storage" in block resource "azurerm_storage_account" according this reference https://www.terraform.io/docs/providers/azurerm/r/storage_account.html*
 2) *Change or add Azure SQL Database properties in module "azure_sql_db" in block resource "azurerm_sql_database" according this reference https://www.terraform.io/docs/providers/azurerm/r/sql_database.html*
