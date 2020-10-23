@@ -2,3 +2,10 @@ variable "rg_name" {}
 variable "location" {}
 variable "tags" {}
 variable "prefix" {}
+variable "DB_firewall_IP1" {}
+variable "DB_firewall_IP2" {}
+variable "DB_firewall_IP3" {}
+variable "DB_firewall_IP4" {}
+variable "DB_firewall_IP5" {}
+variable "DB_firewall_IP6" {}
+variable "DB_firewall_IP7" {}
