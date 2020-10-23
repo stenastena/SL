@@ -85,19 +85,19 @@ resource "azurerm_virtual_network" "vnet" {
   name                = "${var.prefix}-vnet"
   resource_group_name = var.rg_name
   location            = var.location
-  address_space       = ["10.0.0.0/16"]
+  address_space       = [var.virtual_network_address_space]
 
 ####The network waits a MS SQL Database for deploying MS SQLDB private endpoint  
   depends_on          = [azurerm_sql_server.sql_server]
 ####
-  tags                         = var.tags
+  tags                = var.tags
 }
 
 resource "azurerm_subnet" "subnet1" {
   name                 = "subnet1"
   resource_group_name  = var.rg_name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = [var.subnet_address_space]
 
   enforce_private_link_service_network_policies = true
   enforce_private_link_endpoint_network_policies = true

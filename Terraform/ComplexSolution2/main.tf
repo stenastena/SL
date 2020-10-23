@@ -35,6 +35,8 @@ module "sqldb-network" {
   DB_firewall_IP5 = var.DB_firewall_IP5
   DB_firewall_IP6 = var.DB_firewall_IP6
   DB_firewall_IP7 = var.DB_firewall_IP7
+  virtual_network_address_space = var.virtual_network_address_space
+  subnet_address_space          = var.subnet_address_space
 }
 
 module "containerinstance" {

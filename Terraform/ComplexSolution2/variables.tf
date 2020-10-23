@@ -1,10 +1,10 @@
 variable "prefix" {
-  description   = "The prefix which should be used for all resources in this example"
+  description   = "The prefix which should be used for all resources"
   default       = "osh3"
 }
 
 variable "location" {
-  description   = "The Azure Region in which all resources in this example should be created."
+  description   = "The Azure Region in which all resources have to be created"
   default       = "North Europe"
 }
 
@@ -51,6 +51,19 @@ variable "DB_firewall_IP7" {
   type = string
   default     = "104.43.163.210"
   description = "Permitted IP address for access DB"
+}
+
+
+variable "virtual_network_address_space"{
+  type = string
+  default     = "10.0.0.0/16"
+  description = ""
+} 
+
+variable "subnet_address_space"{
+  type = string
+  default     = "10.0.1.0/24"
+  description = ""
 }
 
 variable "client_id" {

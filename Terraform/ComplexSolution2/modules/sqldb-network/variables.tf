@@ -9,3 +9,5 @@ variable "DB_firewall_IP4" {}
 variable "DB_firewall_IP5" {}
 variable "DB_firewall_IP6" {}
 variable "DB_firewall_IP7" {}
+variable "virtual_network_address_space" {}
+variable "subnet_address_space" {}
